@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="denx" fetch="git://git.denx.de/"/>
+  <remote name="github" fetch="git://github.com/NVIDIA/"/>
+  <remote name="korg" fetch="git://git.kernel.org/pub/scm/"/>
+  <remote name="alex" fetch="git://github.com/Gnurou/"/>
+  <remote name="lauri" fetch="git://github.com/scele/"/>
+
+  <default revision="master"/>
+
+  <project path="uboot-flasher/cbootimage" name="cbootimage.git" remote="github" groups="tools"/>
+  <project path="uboot-flasher/cbootimage-configs" name="cbootimage-configs.git" remote="github"/>
+  <project path="uboot-flasher/dtc" name="utils/dtc/dtc.git" remote="korg" groups="tools"/>
+  <project path="uboot-flasher/scripts" name="tegra-uboot-flasher-scripts.git" remote="github"/>
+  <project path="uboot-flasher/tegrarcm" name="tegrarcm.git" remote="github" groups="tools"/>
+  <project path="uboot-flasher/u-boot" name="u-boot-tegra.git" remote="denx" groups="bootloader"/>
+
+  <project path="linux" name="linux.git" remote="alex" revision="drm"/>
+  <project path="nouveau" name="nouveau.git" remote="lauri" revision="gk20a_sync"/>
+  <project path="nouveau-tests" name="nouveau-tests.git" remote="lauri"/>
+  <project path="scripts" name="tegra-scripts.git" remote="lauri"/>
+</manifest>
