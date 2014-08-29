@@ -16,7 +16,7 @@
   <project path="uboot-flasher/u-boot" name="u-boot-tegra.git" remote="denx" groups="bootloader"/>
 
   <project path="linux" name="linux.git" remote="alex" revision="drm"/>
-  <project path="nouveau" name="nouveau.git" remote="lauri" revision="gk20a_sync"/>
+  <project path="nouveau" name="nouveau.git" remote="alex" revision="gk20a"/>
   <project path="nouveau-tests" name="nouveau-tests.git" remote="lauri"/>
   <project path="scripts" name="tegra-scripts.git" remote="lauri"/>
 </manifest>
