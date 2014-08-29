@@ -3,8 +3,8 @@
   <remote name="denx" fetch="git://git.denx.de/"/>
   <remote name="github" fetch="git://github.com/NVIDIA/"/>
   <remote name="korg" fetch="git://git.kernel.org/pub/scm/"/>
-  <remote name="alex" fetch="git://github.com/Gnurou/"/>
-  <remote name="lauri" fetch="git://github.com/scele/"/>
+  <remote name="alex" fetch="ssh://git@github.com/Gnurou/"/>
+  <remote name="lauri" fetch="ssh://git@github.com/scele/"/>
 
   <default revision="master"/>
 
