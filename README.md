@@ -19,17 +19,15 @@ repo init -u git@github.com:scele/tegra-manifests.git --manifest-name=nouveau.xm
 repo sync -j4
 
 # Flash uboot
-cd $TOP/uboot-flasher/scripts
-./build-tools
-./build build
-./tegra-uboot-flasher flash jetson-tk1
+./uboot-flasher/scripts/build-tools
+./uboot-flasher/scripts/build build
+./uboot-flasher/scripts/tegra-uboot-flasher flash jetson-tk1
+./uboot-flasher/scripts/tegra-uboot-flasher flash jetson-tk1 # yes, I need to run it twice, the first run fails :/
 
 # Build linux
-cd $TOP
 ./scripts/build-linux
 
 # Build nouveau
-cd $TOP
 ./scripts/build-nouveau
 
 # In u-boot console, mount the root filesystem into the host machine
