@@ -8,7 +8,7 @@ Adapted from:
 Works on my Ubuntu 12.04.
 
 ```
-sudo apt-get install build-essential autoconf automake libtool libusb-1.0-0-dev libcrypto++-dev g++-arm-linux-gnueabihf libwayland0 libwayland-dev
+sudo apt-get install build-essential autoconf automake libtool libusb-1.0-0-dev libcrypto++-dev flex bison g++-arm-linux-gnueabihf libwayland0 libwayland-dev
 
 mkdir jetson-nouveau
 cd jetson-nouveau
