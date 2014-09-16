@@ -22,7 +22,7 @@ repo sync -j4
 ./uboot-flasher/scripts/build-tools
 ./uboot-flasher/scripts/build build
 ./uboot-flasher/scripts/tegra-uboot-flasher flash jetson-tk1
-./uboot-flasher/scripts/tegra-uboot-flasher flash jetson-tk1 # yes, I need to run it twice, the first run fails :/
+./uboot-flasher/scripts/tegra-uboot-flasher flash jetson-tk1 # try running it again if the first run fails
 
 # Build linux
 ./scripts/build-linux
@@ -32,9 +32,12 @@ repo sync -j4
 
 # In u-boot console, mount the root filesystem into the host machine
 ums 0 mmc 0
+# Or, alternatively, mount the root filesystem into the host machine using ssh:
+mkdir -p $TOP/out/root_ssh
+sudo sshfs -o allow_other <tk1-ip-address>:/ $TOP/out/root_ssh
 
 # Install the upstream kernel image, dtb, firmware, and the nouveau module
-export BOARD_ROOT=/mnt/your_mounted_emmc
+export BOARD_ROOT=<mounted-rootfs>
 ./scripts/install-linux
 ./scripts/install-firmware
 ./scripts/install-nouveau
