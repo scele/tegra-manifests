@@ -32,9 +32,11 @@ repo sync -j4
 
 # In u-boot console, mount the root filesystem into the host machine
 ums 0 mmc 0
+
 # Or, alternatively, mount the root filesystem into the host machine using ssh:
 mkdir -p $TOP/out/root_ssh
-sudo sshfs -o allow_other <tk1-ip-address>:/ $TOP/out/root_ssh
+sudo sshfs -o allow_other root@<tk1-ip-address>:/ $TOP/out/root_ssh
+# You'll need to set root password allow root ssh access first...
 
 # Install the upstream kernel image, dtb, firmware, and the nouveau module
 export BOARD_ROOT=<mounted-rootfs>
